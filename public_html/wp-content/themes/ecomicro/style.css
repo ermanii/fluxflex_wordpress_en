@@ -1,0 +1,675 @@
+/*
+Theme Name: ecoMicro
+Theme Version: 1.3
+Theme Style: Microblog
+Theme URI: http://idesigneco.com/themes/ecomicro
+Description: An ultra-minimalistic theme that converts your blog into a beautiful microblog
+Author: iDesignEco
+Author URI: http://idesigneco.com
+
+Copyright 2010, idesigneco.com
+*/
+
+body {
+	background: #ddd url('images/bg.png') no-repeat center top;
+	
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+	line-height: 150%;
+	color: #666;
+}
+
+#wrap {
+	margin: 20px auto 0 auto;
+	padding: 0px;
+	min-width: 860px;
+	width: 860px;
+}
+
+#header {
+	margin: 0;
+	overflow: hidden;
+}
+	#header .logo {
+		width: 25%;
+		float: left;
+		margin-top: 0;
+		color: #aaa;
+	}
+	#header .logo p {
+		text-shadow: #eee 0 1px 0px;
+		margin: 0;
+		font-size: 70%;
+	}
+	#header .options {
+		width: 50%;
+		float: right;
+		margin-top: 0;
+		text-align: right;
+	}
+
+	#header .nav ul {
+		float: right;
+		margin-top: 0px;
+		text-align: right;
+		list-style-type: none;
+	}
+	#header .nav li {
+		float: left;
+		margin-left: 10px;
+	}
+	#header .nav li a {
+		padding: 5px 14px 5px 14px;
+		text-transform: lowercase;
+		
+		border-radius: 50px;
+		-border-radius: 50px;
+		-khtml-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+	}
+
+		#header .nav li ul {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			margin-top: 10px;
+		}
+
+		#header .nav li li a {
+			font-size: 90%;
+		}
+		#header .nav li li {
+			width: auto;
+			display: inline;
+			float: none;
+		}
+		#header .nav li li a:hover {
+			background: none;
+		}
+
+	#header .nav li a:hover, #header .nav .current_page_item a {
+		background: #fff;
+		
+	}
+	#header .nav .current_page_item a {
+		border-width: 0px;
+		border-style: solid;
+		border-color: #e3e3e3;
+		
+	}
+	#header .nav li ul {
+		display: none;
+	}
+	#header .nav .current_page_item ul {
+		display: block;
+		position: absolute;
+	}
+	#header .nav .current_page_item ul li a {
+		background: none;
+		color: #666;
+	}
+	
+	.nav_categories {
+		width: 100%;
+		overflow: hidden;
+		margin: 20px 0 0 70px !important;
+		padding: 3px 12px 3px 12px !important;		
+		border-radius: 50px;
+		-border-radius: 50px;
+		-khtml-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+	}
+	.nav_categories li {
+		display: inline;
+		font-size: 90%;
+	}
+	.nav_categories li a {
+		padding: 6px 14px 5px 14px;
+		color: #888;
+	}
+	.nav_categories .current-cat a, .nav_categories a:hover {
+		border-radius: 50px;
+		-border-radius: 50px;
+		-khtml-border-radius: 50px;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		
+		background: #fff;
+	}
+
+#main {
+	margin-top: 25px;
+}
+#content {
+	width: 68%;
+	float: left;
+}
+	/* different content widthes based on sidebar visibility preferences */
+	.nosidebar #content {
+		float: none;
+		width: auto;
+	}
+	.nosidebar .post .post_body {
+		width: 89%;
+	}
+
+#sidebar {
+	width: 30%;
+	float: right;
+	font-size: 90%;
+}
+
+#footer {
+	margin-top: 50px;
+	overflow: hidden;
+	font-size: 80%;
+}
+	#footer #s {
+		width: 150px;
+	}
+
+#footerbar .widget {
+	width: 28%;
+	margin-right: 20px;
+	float: left;
+}
+	#footerbar .widget ul {
+		padding: 10px;
+		border-radius: 10px;
+		-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+	#footerbar .widget li {
+		border-bottom: 1px dotted #aaa;
+		padding-bottom: 2px;
+	}
+
+
+.copyright {
+	margin-top: 20px;
+	font-size: 85%;
+}
+	.copyright .text {
+		float: left;
+		margin: 0;
+	}
+	
+	.copyright .footer_nav {
+		float: left;
+		margin-left: 40px;
+	}
+		.copyright .footer_nav a:hover {
+			text-decoration: underline;
+		}
+		.copyright .footer_nav li {
+			display: inline;
+			margin-right: 10px;
+		}
+
+	#idesigneco {
+		text-align: right;
+		float: right;
+	}
+/* ________________________________________________________ */
+
+.pagetitle {
+	margin-bottom: 25px;
+	color: #666;
+}
+
+.post {
+	margin: 0 0 25px 0;
+	overflow: hidden;
+	font-size: 90%;
+}
+	.post .post_body {
+		float: left;
+		width: 83%;
+	}
+	.post .content {
+		background: #fff url('images/bg_comment.png') repeat-x;
+		background-position: bottom left;
+		color: #888;
+		
+		padding: 15px 15px 15px 15px;
+
+		border-radius: 10px;
+		-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		
+		border-width: 0px;
+		border-style: solid;
+		border-color: #e3e3e3;
+
+		overflow: hidden;
+	}
+	.post .strip {
+		background: url('images/bg_arrow.png') no-repeat;
+		background-position: top right;
+		float: left;
+		padding: 6px 20px 6px 6px;
+		text-align: center;
+	}
+	.post .strip p {
+		margin: 3px 0 0 0;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.post .strip .day {
+		margin-top: 15px;
+		font-size: 200%;
+	}
+	
+
+	.post .avatar {
+	}
+	.post .title {
+		margin: 0;
+	}
+	.post .text p {
+		margin-bottom: 5px;
+	}
+	.post .text a {
+		text-decoration: underline;
+	}
+	.post .text h1, .post .text h2, .post .text h3, .post .text h4 {
+		margin: 35px 0 10px 0;
+	}
+
+	
+	.post .meta, .post .postmetadata {
+		margin: 0;
+		font-size: 75%;
+	}
+	.post .meta {
+		margin: 5px 0 0 10px;
+	}
+	.single .post .meta {
+		margin: 20px 0 0 0;
+	}
+	.post .postmetadata {
+		margin-top: 30px;
+		list-style-type: none;
+	}
+	.post .meta p {
+		padding: 0;
+		margin: 0;
+		float: left;
+		margin-right: 20px;
+	}
+	.post .meta .tags {
+		background: url('images/ico_tag.png') no-repeat;
+		background-position: 0px 6px;
+		float: left;
+		padding-left: 16px;
+		min-height: 12px;
+	}
+
+
+	.post .comment_snippets {
+		background: url('images/bg_arrow_comment.png') no-repeat;
+		background-position: 60px 0;
+		overflow: hidden;
+		
+	}
+	.post .comment_snippets ul {
+		background: #f9f9f9 left bottom;
+		margin: 18px 0 0 40px;
+		padding: 10px 5px 10px 5px;
+		list-style-type: none;
+		
+
+		border-radius: 10px;
+		-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+
+	}
+	.post .comment_snippets li {
+		background: #fff url('images/bg_comment.png') repeat-x;
+		background-position: bottom left;
+		padding: 5px 5px 8px 5px;
+		font-size: 80%;
+	}
+	.post .comment_snippets li:hover {
+		background: transparent;
+	}
+	.post .comment_snippets .author {
+		font-weight: bold;
+		margin-right: 5px;
+	}
+		.post .comment_snippets .author img {
+			margin-right: 5px;
+			float: left;
+		}
+
+/* ________________________________________________________ */
+	
+
+.sticky {
+	background: #f7f7f7;
+	padding: 0 10px 10px;
+	}
+.sticky h2 {
+	padding-top: 10px;
+	}
+
+#respond, #comments {
+	margin-top: 50px;
+}
+
+#respond textarea {
+	width: 95% !important;
+}
+
+.commentlist li ul li {
+	
+}
+
+.commentlist li {
+	font-weight: bold;
+	background: #f3f3f3;
+	padding: 6px;
+	margin-bottom: 10px;
+
+	border-radius: 10px;
+	-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.commentlist li .avatar { 
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	background: #fff;
+	}
+
+.commentlist cite, .commentlist cite a {
+	font-weight: bold;
+	font-style: normal;
+}
+
+.commentlist p {
+	font-weight: normal;
+}
+
+.commentmetadata {
+	font-weight: normal;
+	font-size: 80%;
+}
+
+
+/* ________________________________________________________ */
+
+.widget {
+	background: #fff;
+	margin: 0;
+	padding: 10px;
+	
+	border-radius: 10px;
+	-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+
+	font-size: 85%;
+}
+	.widget .widgettitle {
+		margin: 0;
+	}
+	.widget ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	.widget input {
+		display: block;
+		margin-bottom: 5px;
+	}
+	
+.widgetbanners {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+	.widgetbanners li {
+		display: inline;
+		margin: 2px 2px 2px 0;
+	}
+
+#sidebar .widget {
+	margin-bottom: 35px;
+	clear: both;
+}
+
+
+.ide_widget_ecosocial {
+	background: #fff;
+	overflow: hidden;
+}
+	.ide_widget_ecosocial ul {
+		background: none;
+		list-style-type: none;
+		width: 28%;
+		padding: 0 !important;
+		float: left;
+	}
+	.ide_widget_ecosocial .list {
+		margin: 20px 0 0 10px;
+	}
+	.ide_widget_ecosocial .list li {
+		margin-bottom: 6px;
+	}
+	.ide_widget_ecosocial .list li .sel {
+		font-weight: bold;
+	}
+
+	.ide_widget_ecosocial .stats {
+		width: 60%;
+		float: right;
+		margin: 15px 15px 15px 0;
+		text-align: center;
+		overflow: hidden;
+	}
+		.ide_widget_ecosocial .stats li {
+			display: none;
+			overflow: hidden;
+			text-align: center;
+		}
+	.ide_widget_ecosocial .stats .caption {
+		display: block;
+	}
+	.ide_widget_ecosocial .stats .twitter p {
+			font-size: 90% !important;
+			color: #666 !important;
+	}
+	.ide_widget_ecosocial .stats .twitter .twtr-ft {
+		display: none;
+	}
+
+
+/* ________________________________________________________ */
+
+.searchform .input, #s {
+	background: #fff;
+	margin: 6px 0 0 0;
+	padding-left: 12px;
+
+	border: 1px solid #ddd;
+}
+	
+/* ________________________________________________________ */
+
+a {
+	text-decoration: none;
+	color: #666;
+}
+a:hover {
+	color: #333;
+}
+
+a img {
+	border: 0;
+}
+
+h1,h2,h3, h4 {
+	margin: 0 0 10px 0;
+	color: #666;
+	text-shadow: #eee 0 1px 0px;
+}
+
+h1 {
+	font-size: 160%;
+	font-weight: normal;
+}
+h2 {
+	font-size: 140%;
+}
+h3, h4 {
+	font-size: 120%;
+}
+
+input, select, textarea {
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #999;
+	
+	border-radius: 10px;
+	-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+blockquote {
+	background: #efefef;
+	padding: 1px 5px 1px 5px;
+	font-style: italic;
+}
+blockquote blockquote {
+	margin: 5px;
+	padding: 5px;
+	clear: both;
+}
+
+acronym, abbr, span.caps {
+	font-size: 0.9em;
+	letter-spacing: .07em;
+}
+
+
+.alignleft {
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+.alignright {
+	float: right;
+	margin: 5px 0 5px 10px;
+}
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+}
+img.alignleft {
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+img.alignright {
+	float: right;
+	margin: 5px 0 5px 10px;
+}
+img.aligncenter {
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+}
+.wp-caption {
+	background-color: #f3f3f3;
+	border: 1px solid #ddd;
+	padding-top: 4px;
+	text-align: center;
+	
+	border-radius: 5px;
+	-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.wp-caption img {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 75%;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+.noul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.button, #searchsubmit {
+	background: #3399FF;
+	width: auto;
+	padding: 4px 15px 4px 15px;
+	border: 0;
+	font-weight: bold;
+	font-size: 100%;
+	color: #fff;
+	
+	border-radius: 10px;
+	-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+a.button:hover {
+	background: #666;
+	color: #fff;
+}
+
+.clear {
+	clear: both;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+}
+n:hover {
+	background: #666;
+	color: #fff;
+}
+
+.clear {
+	clear: both;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+}
+
+	/* different site widths */
+	.wide_medium #wrap {
+		width: 70% !important;
+	}
+	.wide #wrap {
+		width: 80% !important;
+	}
+	.wide_very #wrap {
+		width: 95% !important;
+	}
